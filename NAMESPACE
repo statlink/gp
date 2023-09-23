@@ -1,0 +1,9 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("stats", optim, model.matrix)
+importFrom("Rfast", Var, colsums, eachcol.apply, qpois.reg)
+importFrom("RNGforGPD", GenUniGpois)
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+
