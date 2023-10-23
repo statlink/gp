@@ -1,15 +1,15 @@
-\name{Density computation of the generalized Poisson distribution}
-\alias{dgp}
+\name{Cumulative probability mass of the generalized Poisson distribution}
+\alias{pgp}
 \title{
-Density computation of the generalized Poisson distribution
+Cumulative probability mass of the generalized Poisson distribution
 }
 
 \description{
-Density computation of the generalized Poisson distribution.
+Cumulative probability mass of the generalized Poisson distribution.
 }
 
 \usage{
-dgp(y, theta, lambda, logged = TRUE)
+pgp(y, theta, lambda)
 }
 
 \arguments{
@@ -22,17 +22,14 @@ The value of the \eqn{\theta} parameter.
 \item{lambda}{
 The value of the \eqn{\lambda} parameter.
 }
-\item{logged}{
-Should the logarithm of the density values be computed? The default value is TRUE.
-}
 }
 
 \details{
-The density of the generealized Poisson distribution is computed.
+The cumulative probability mass of the generealized Poisson distribution is computed.
 }
 
 \value{
-A vector with the logged density values.
+A vector with the probabilities.
 }
 
 \references{
@@ -48,16 +45,15 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 %\note{
-%%  ~~further notes~~
-%}
+  %%  ~~further notes~~
+    %}
 \seealso{
-\code{\link{rgp}, \link{pgp} }
+\code{\link{dgp}, \link{rgp} }
 }
 
 \examples{
 y <-  rgp(1000, 10, 0.5, method = "Inversion")
 a <- gp.mle(y)
-f <- dgp(y, a[1], a[2])
-sum(f)
+pgp(y[1:10], a[1], a[2])
 }
 

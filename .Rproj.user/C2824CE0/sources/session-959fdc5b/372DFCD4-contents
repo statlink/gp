@@ -17,10 +17,10 @@ dgp(y, theta, lambda, logged = TRUE)
 A vector with non negative integer values.
 }
 \item{theta}{
-the value of the \eqn{\theta} parameter.
+The value of the \eqn{\theta} parameter.
 }
 \item{lambda}{
-the value of the \eqn{\lambda} parameter.
+The value of the \eqn{\lambda} parameter.
 }
 \item{logged}{
 Should the logarithm of the density values be computed? The default value is TRUE.
@@ -51,7 +51,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{\link{rgp} }
+\code{\link{rgp}, \link{pgp} }
 }
 
 \examples{
